@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* colors */
+  --primary: #f0ae43;
+  --brown: #3f201e;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.4rem;
+  background: url("./images/ice-cream-backgroud.svg");
+  background-repeat: repeat;
+  background-size: 3px;
+  background-repeat: space;
+}
+
+.header {
+  background: var(--primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header > img {
+  width: 8rem;
+  border-radius: 50%;
+  margin-top: 1rem;
+  margin-bottom: -1rem;
+}
+
+.header > p {
+  margin-right: 2rem;
+  color: var(--brown);
+  font-weight: bold;
+  align-self: flex-end;
+}
+
+.navbar {
+  width: 100%;
+  height: 8rem;
+  padding: 0 2rem;
+  position: fixed;
+  background-color: #f0ae43;
+  top: calc(100% - 8rem);
+  left: 0;
+  right: 0;
+}
+
+.navbar > ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.categories > li {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.categories > li > a {
+  text-decoration: none;
+  color: var(--brown);
+  margin-bottom: 1rem;
+}
+
+.categories > li > a:hover {
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.main {
+  padding: 0 2rem;
+  padding-bottom: 8rem;
+}
+
+.section {
+  margin: 0.5rem 0 2rem 0;
+  padding: 2rem 1rem;
+  background-color: white;
+  height: calc(80vh);
+  border-radius: 1rem;
+  box-shadow: 1px 3px 11px -5px rgba(0, 0, 0, 0.76);
+}
+
+.section__header {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.section__header > h2 {
+  text-transform: uppercase;
+}
+
+.section__header > img {
+  width: 20px;
+  margin-right: 0.5rem;
+}
+
+.section__footer {
+  width: 30px;
+  justify-self: flex-end;
+  align-items: center;
+}
+
+.items {
+  width: 100%;
+  padding: 0 1.5rem;
+}
+
+.item {
+  border-bottom: 1px dashed var(--brown);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.item__description {
+  max-width: 200px;
+}
