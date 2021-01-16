@@ -6,141 +6,58 @@
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  
-  <main class="main">
-    <section class="section" id="secCarnes">
-      <div class="section__header">
-        <img src="./images/ice-cream-backgroud.svg" alt="">
-        <h2>CARNES</h2>
-      </div>
-      <div class="items">
-        <div class="item">
-          <div class="item__description">
-            <h3>Heaven can wait</h3>
-            <p>Mashed potatoes, confit onion</p>
-          </div>
-          <div class="item__price">
-            <p>S./ 25.00</p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="item__description">
-            <h3>Provence Pro</h3>
-            <p>Onion marmalade, confit pear, Organic Peppers</p>
-          </div>
-          <div class="item__price">
-            <p>S./ 25.00</p>
-          </div>
-        </div>
-      </div>
-      
-    </section>
-
-    <section class="section" id="secPescados">
-      <div class="section__header">
-        <img src="./images/ice-cream-backgroud.svg" alt="">
-        <h2>PESCADOS</h2>
-      </div>
-      <div class="items">
-        <div class="item">
-          <div class="item__description">
-            <h3>Heaven can wait</h3>
-            <p>Mashed potatoes, confit onion</p>
-          </div>
-          <div class="item__price">
-            <p>S./ 25.00</p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="item__description">
-            <h3>Provence Pro</h3>
-            <p>Onion marmalade, confit pear, Organic Peppers</p>
-          </div>
-          <div class="item__price">
-            <p>S./ 25.00</p>
-          </div>
-        </div>
-      </div>
-      
-    </section>
-
-    <section class="section" id="secVerduras">
-      <div class="section__header">
-        <img src="./images/ice-cream-backgroud.svg" alt="">
-        <h2>VERDURAS</h2>
-      </div>
-      <div class="items">
-        <div class="item">
-          <div class="item__description">
-            <h3>Heaven can wait</h3>
-            <p>Mashed potatoes, confit onion</p>
-          </div>
-          <div class="item__price">
-            <p>S./ 25.00</p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="item__description">
-            <h3>Provence Pro</h3>
-            <p>Onion marmalade, confit pear, Organic Peppers</p>
-          </div>
-          <div class="item__price">
-            <p>S./ 25.00</p>
-          </div>
-        </div>
-      </div>
-      
-    </section>
-
-    <section class="section" id="secPastas">
-      <div class="section__header">
-        <img src="./images/ice-cream-backgroud.svg" alt="">
-        <h2>PASTAS</h2>
-      </div>
-      <div class="items">
-        <div class="item">
-          <div class="item__description">
-            <h3>Heaven can wait</h3>
-            <p>Mashed potatoes, confit onion</p>
-          </div>
-          <div class="item__price">
-            <p>S./ 25.00</p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="item__description">
-            <h3>Provence Pro</h3>
-            <p>Onion marmalade, confit pear, Organic Peppers</p>
-          </div>
-          <div class="item__price">
-            <p>S./ 25.00</p>
-          </div>
-        </div>
-      </div>
-      
-    </section>
-    
-  </main>
+<body onload="whatIsHeight()">
   <nav class="navbar">
-    <ul class="categories">
-      <li>
-        <a href="#secCarnes">Carnes</a>
-        <img src="./images/ice-cream-backgroud.svg" alt="" width="30px">
-      </li>
-      <li>
-        <a href="#secPescados">Pescados</a>
-        <img src="./images/ice-cream-backgroud.svg" alt="" width="30px">
-      </li>
-      <li>
-        <a href="#secVerduras">Verduras</a>
-        <img src="./images/ice-cream-backgroud.svg" alt="" width="30px">
-      </li>
-      <li>
-        <a href="#secPastas">Pastas</a>
-        <img src="./images/ice-cream-backgroud.svg" alt="" width="30px">
-      </li>
+    <ul>
+      <li><a href="#">01. Home</a> </li>
+      <li><a href="#secA">02. Section A</a> </li>
+      <li><a href="#secB">03. Section B</a> </li>
+      <li><a href="#secC">04. Section C</a> </li>
+      <li><a href="#secD">05. Section D</a> </li>
+      
     </ul>
   </nav>
+
+  <section class="presentation">
+    <button onclick="scrolling()">
+      Ver la carta
+    </button>
+  </section>
+
+  <main class="main">
+    <section class="section" id="secA">
+      <h1>Section A</h1>
+    </section>
+    <section class="section" id="secB">
+      <h1>Section B</h1>
+    </section>
+    <section class="section" id="secC">
+      <h1>Section C</h1>
+    </section>
+    <section class="section" id="secD">
+      <h1>Section D</h1>
+    </section>
+  </main>
+
+<script>
+  let vhDesktop
+  let vhMobile
+  const secA = document.getElementById('secA')
+
+  function whatIsHeight() {
+    vhDesktop = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+    vhMobile = screen.height
+  }
+
+  function scrolling() {
+    if(screen.width > 1000){
+      window.scroll(0, vhDesktop)
+    } else {
+      window.scroll(0, vhMobile)
+    }
+
+  }
+</script>
+  
 </body>
 </html>
