@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .presentation {
@@ -27,7 +27,7 @@ body {
   align-items: center;
 }
 
-.presentation > button {
+.presentation > a {
   margin-top: 40rem;
   width: 20rem;
   height: 4rem;
@@ -36,6 +36,11 @@ body {
   border-radius: 1rem;
   color: cadetblue;
   font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 2rem;
 }
 
 .navbar {
@@ -71,21 +76,36 @@ body {
 
 .section {
   height: 100%;
-  padding: 8rem 1rem;
+  padding: 8rem 0rem;
 }
 
-.section:nth-child(1) {
+.section > h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+}
+
+.bg-color-coral {
   background-color: coral;
 }
 
-.section:nth-child(2) {
+.bg-color-rebeccapurple {
   background-color: rebeccapurple;
 }
 
-.section:nth-child(3) {
+.bg-color-greenyellow {
   background-color: greenyellow;
 }
 
-.section:nth-child(4) {
+.bg-color-wheat {
   background-color: wheat;
+}
+
+.section__content {
+  margin: 0 auto;
+  max-width: 80rem;
+  height: 100%;
+  /* border: 1px red solid; */
+  padding: 1rem 2rem;
 }

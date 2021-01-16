@@ -6,7 +6,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body onload="whatIsHeight()">
+<body>
   <nav class="navbar">
     <ul>
       <li><a href="#">01. Home</a> </li>
@@ -19,44 +19,36 @@
   </nav>
 
   <section class="presentation">
-    <button onclick="scrolling()">
-      Ver la carta
-    </button>
+    <a href="#secA">See Menu</a>
   </section>
 
   <main class="main">
     <section class="section" id="secA">
-      <h1>Section A</h1>
+      <h1 class="section__title bg-color-coral">Section A</h1>
+      <div class="section__content">
+        <div class="item">
+          <div class="item__description">
+            <h3>Heaven can wait</h3>
+            <p>Mashed potatoes, confit onion</p>
+          </div>
+          <div class="item__price">
+            <p>S./ 25.00</p>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="section" id="secB">
-      <h1>Section B</h1>
+      <h1 class="section__title bg-color-rebeccapurple">Section B</h1>
     </section>
     <section class="section" id="secC">
-      <h1>Section C</h1>
+      <h1 class="section__title bg-color-greenyellow">Section C</h1>
     </section>
     <section class="section" id="secD">
-      <h1>Section D</h1>
+      <h1 class="section__title bg-color-wheat">Section D</h1>
     </section>
   </main>
 
 <script>
-  let vhDesktop
-  let vhMobile
-  const secA = document.getElementById('secA')
-
-  function whatIsHeight() {
-    vhDesktop = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
-    vhMobile = screen.height
-  }
-
-  function scrolling() {
-    if(screen.width > 1000){
-      window.scroll(0, vhDesktop)
-    } else {
-      window.scroll(0, vhMobile)
-    }
-
-  }
 </script>
   
 </body>
